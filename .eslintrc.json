@@ -1,0 +1,42 @@
+{
+  "root": true,
+  "env": {
+    "es2021": true,
+    "node": true
+    // "browser": true,
+  },
+  "parser": "@typescript-eslint/parser", // https://typescript-eslint.io/getting-started/
+  "parserOptions": {
+    "project": "tsconfig.eslint.json", // https://typescript-eslint.io/architecture/parser/
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "extends": [
+    "eslint:recommended", // https://typescript-eslint.io/getting-started/
+    "plugin:@typescript-eslint/recommended", // https://typescript-eslint.io/getting-started/
+    "plugin:@typescript-eslint/recommended-requiring-type-checking", // https://typescript-eslint.io/linting/typed-linting
+    "prettier", // Turns off all rules that are unnecessary or might conflict with Prettier.
+    "airbnb-base", // https://www.npmjs.com/package/eslint-config-airbnb-base
+    "airbnb-typescript/base" // https://www.npmjs.com/package/eslint-config-airbnb-typescript
+  ],
+  "plugins": [
+    "@typescript-eslint", // https://typescript-eslint.io/getting-started/
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "spaced-comment": "warn",
+    "no-console": "warn",
+    "consistent-return": "off",
+    "func-names": "off",
+    "object-shorthand": "off",
+    "no-process-exit": "off",
+    "no-param-reassign": "off",
+    "no-return-await": "warn",
+    "no-underscore-dangle": "off",
+    "class-methods-use-this": "off",
+    "prefer-destructuring": ["error", { "object": true, "array": false }],
+    "no-unused-vars": ["error", { "argsIgnorePattern": "req|res|next|val" }]
+  },
+  "overrides": []
+}
